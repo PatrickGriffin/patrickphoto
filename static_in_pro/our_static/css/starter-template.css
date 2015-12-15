@@ -1,0 +1,32 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.paddy-custom-link {
+	color: black;
+	font-family: "Roboto condensed";
+}
+.paddy-custom-link:hover {
+	color: gray;
+	font-family: "Roboto condensed";
+	text-decoration: blink;
+}
+
+.paddy-img-collection{
+    max-height: 600px;
+    cursor: pointer;
+    margin: auto;
+    padding: 20px;
+}
+
+.paddy-custom-contact{
+	margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    /*max-width: 500px;*/
+    float: none;
+    text-align: center
+}

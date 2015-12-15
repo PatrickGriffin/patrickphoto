@@ -1,0 +1,14 @@
+{% extends "home.html" %}
+{% load crispy_forms_tags %}
+{% block head_tag %}Form {% endblock %}
+
+{% block content%}
+<div class='paddy-custom-contact'>
+	<form method='POST' action='' enctype="multipart/form-data">{% csrf_token %}
+	{{image_form|crispy}}
+
+	<input class='btn btn-primary' type='submit' value='Submit'/>
+
+	</form>
+</div>
+{% endblock %}
