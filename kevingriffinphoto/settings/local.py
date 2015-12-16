@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'kevingriffinphoto.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "[patrickgriffin]",
+        "NAME": "patrickgriffin",
         "USER": "",
         "PASSWORD": "",
         "HOST": "localhost",
@@ -128,17 +128,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 MEDIA_URL='/media/'
-MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
+MEDIA_ROOT =  'Users/patrickgriffin/anaconda/envs/dadwebsite/static_in_env/media_root'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
+STATIC_ROOT = 'Users/patrickgriffin/anaconda/envs/dadwebsite/static_in_env/static_root'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static_in_pro", "our_static"),
+    #os.path.join(BASE_DIR, "static_in_pro", "our_static"),
+    'Users/patrickgriffin/anaconda/envs/dadwebsite/src/static_in_pro/our_static'
     #os.path.join(BASE_DIR, "static_in_env"),
     )
 
