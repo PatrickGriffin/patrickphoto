@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+kevingriffinphoto/settings/local.py
+
 # C extensions
 *.so
 
