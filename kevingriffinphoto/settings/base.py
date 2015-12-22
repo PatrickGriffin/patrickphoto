@@ -25,7 +25,7 @@ SECRET_KEY = '6nmyog_sed2oubf(yh1(8ur$e#b4oxda7x@*o4*zm3c(t5ok$b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'stickerallthetime@gmail.com'
 EMAIL_HOST_PASSWORD = 'beetlejuice'
