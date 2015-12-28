@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Static asset configuration
 # import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles') 
+STATIC_ROOT = 'staticfiles'
+MEDIA_ROOT = 'mediafiles'
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
