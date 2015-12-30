@@ -14,7 +14,7 @@ DATABASES['default'] =  dj_database_url.config()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['https://calm-ocean-6555.herokuapp.com']
+ALLOWED_HOSTS = ['calm-ocean-6555.herokuapp.com']
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Static asset configuration
