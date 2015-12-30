@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$/', 'portfolio.views.home', name='home'),
+    url(r'^$', 'portfolio.views.home', name='home'),
     url(r'^upload/', 'portfolio.views.upload', name='upload'),
     url(r'^contact/', 'portfolio.views.contact', name='contact'),
     url(r'^blog/', 'portfolio.views.blog', name='blog'),
@@ -29,3 +29,5 @@ urlpatterns = [
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
