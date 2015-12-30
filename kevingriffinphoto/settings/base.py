@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'portfolio.apps.PortfolioConfig',
+    'gunicorn'
 ]
 
 MIDDLEWARE_CLASSES = [
