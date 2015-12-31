@@ -20,13 +20,39 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Static asset configuration
 # import os
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-MEDIA_ROOT = 'mediafiles'
+#STATIC_ROOT = 'staticfiles'
+#MEDIA_ROOT = 'mediafiles'
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+#STATIC_URL = '/static/'
+#MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
      os.path.join(BASE_DIR, "static_in_pro", "our_static"),
 )
+
+AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
+AWS_ACCESS_KEY_ID = 'AKIAJ5TADQUPZQ6NQE7A'
+AWS_SECRET_ACCESS_KEY = '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'
+
+    # Tell django-storages that when coming up with the URL for an item in S3 storage, keep
+    # it simple - just use this domain plus the path. (If this isn't set, things get complicated).
+    # This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
+    # We also use it in the next setting.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+    # This is used by the `static` template tag from `static`, if you're using that. Or if anything else
+    # refers directly to STATIC_URL. So it's safest to always set it.
+#STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+
+    # Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
+    # you run `collectstatic`).
+#STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+
+MEDIAFILES_LOCATION = 'media'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

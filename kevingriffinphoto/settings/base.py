@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'portfolio.apps.PortfolioConfig',
     'gunicorn',
+    'storages',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -125,6 +126,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'Cache-Control': 'max-age=94608000',
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
