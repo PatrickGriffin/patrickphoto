@@ -1,6 +1,6 @@
 import os
 from django.conf import settings
-from .custom_storages import StaticStorage, MediaStorage
+from custom_storages import StaticStorage, MediaStorage
 
 DEBUG = False
 TEMPLATE_DEBUG = False
