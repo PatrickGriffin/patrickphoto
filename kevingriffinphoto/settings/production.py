@@ -32,8 +32,8 @@ STATICFILES_DIRS = (
 )
 
 AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
-AWS_ACCESS_KEY_ID = 'AKIAJ5TADQUPZQ6NQE7A'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIAJPBE675RBH3RZJJQ'
+AWS_SECRET_ACCESS_KEY = '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'
 
     # Tell django-storages that when coming up with the URL for an item in S3 storage, keep
     # it simple - just use this domain plus the path. (If this isn't set, things get complicated).
