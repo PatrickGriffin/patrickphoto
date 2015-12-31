@@ -135,10 +135,10 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 MEDIA_URL='/media/'
 MEDIA_ROOT =  os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_root")
-
+MEDIAFILES_LOCATION = 'media'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
+STATICFILES_LOCATION = 'static'
 STATIC_URL = '/static/'
 
 STATIC_ROOT =os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
