@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 from custom_storages import StaticStorage, MediaStorage
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = False
 
 DATABASES = settings.DATABASES
@@ -29,9 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 
 
 
-# AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
-# AWS_ACCESS_KEY_ID = 'AKIAJPBE675RBH3RZJJQ'
-# AWS_SECRET_ACCESS_KEY = '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'
+
 
     # Tell django-storages that when coming up with the URL for an item in S3 storage, keep
     # it simple - just use this domain plus the path. (If this isn't set, things get complicated).
