@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'portfolio.apps.PortfolioConfig',
     'gunicorn',
-    'storages',
 ]
 
 MIDDLEWARE_CLASSES = [
