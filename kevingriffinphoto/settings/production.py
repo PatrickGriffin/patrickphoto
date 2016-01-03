@@ -57,5 +57,4 @@ DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_DIRS = (
      os.path.join(BASE_DIR, "static_in_pro", "our_static"),
-     MEDIA_URL,
 )
