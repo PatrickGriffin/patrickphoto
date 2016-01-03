@@ -29,23 +29,26 @@ def blog(request):
 
 def upload(request):
 	print(request.method)
-	if request.method == 'POST':
-		image_form = UploadImageForm(request.POST, request.FILES)
-		if(image_form.is_valid()):
-			image_form.save()
-			return HttpResponseRedirect('/')
-	else:
-		image_form = UploadImageForm()
+	if request.user.is_superuser:
+		if request.method == 'POST':
+			image_form = UploadImageForm(request.POST, request.FILES)
+			if(image_form.is_valid()):
+				image_form.save()
+				return HttpResponseRedirect('/')
+		else:
+			image_form = UploadImageForm()
 
-		# if image_form.is_valid():
-		# print(image_form.is_valid())
-		# print(request.FILES)
-	
-	context = {
-		"image_form":image_form,
-	}
-	
-	return render(request, "upload.html", context)	
+			# if image_form.is_valid():
+			# print(image_form.is_valid())
+			# print(request.FILES)
+		
+		context = {
+			"image_form":image_form,
+		}
+		
+		return render(request, "upload.html", context)
+	else:
+		return HttpResponseRedirect('/')	
 
 def contact(request):
 	form = ContactForm(request.POST or None)
