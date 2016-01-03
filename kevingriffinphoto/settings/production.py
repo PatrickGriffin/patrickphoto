@@ -27,9 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 #STATIC_URL = '/static/'
 #MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = (
-     os.path.join(BASE_DIR, "static_in_pro", "our_static"),
-)
+
 
 # AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
 # AWS_ACCESS_KEY_ID = 'AKIAJPBE675RBH3RZJJQ'
@@ -57,3 +55,7 @@ MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://%s/%s/" % (settings.AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_DIRS = (
+     os.path.join(BASE_DIR, "static_in_pro", "our_static"),
+     MEDIA_URL,
+)
