@@ -150,6 +150,7 @@ STATICFILES_DIRS = (
     #os.path.join(BASE_DIR, "static_in_env"),
     )
 
+AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
 
 
 
