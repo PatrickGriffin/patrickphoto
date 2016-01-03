@@ -2,7 +2,7 @@ import os
 from django.conf import settings
 from custom_storages import StaticStorage, MediaStorage
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = False
 
 DATABASES = settings.DATABASES
