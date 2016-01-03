@@ -5,7 +5,7 @@
     <div class='container'>
 	    {% for instance in queryset %}
 		<div id="links">
-		    <a href="{% 'https:/patrickgriffinphoto.s3.amazonaws.com/media'+instance %}" title="{{instance}}" data-gallery>
+		    <a href="{% static instance %}" title="{{instance}}" data-gallery>
 		      <div class='row' style='max-height:600px'>
 		        <img class='img-responsive paddy-img-collection' src="{% static instance %}" alt="Banana" height='500' length='700'>
 		      </div>
