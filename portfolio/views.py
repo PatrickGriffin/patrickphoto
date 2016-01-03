@@ -11,7 +11,7 @@ def home(request):
 			'queryset':[]
 		}
 	for instance in queryset:
-		context['queryset'].append('/media/'+str(instance.image))
+		context['queryset'].append(settings.MEDIA_URL+str(instance.image))
 
 	return render(request, 'home_page_content.html', context)
 # Create your views here.
@@ -23,7 +23,7 @@ def blog(request):
 		}
 	for instance in queryset:
 
-		context['queryset'].append('/media/'+str(instance.image))
+		context['queryset'].append(settings.MEDIA_URL+str(instance.image))
 
 	return render(request, 'home_page_content.html', context)
 
