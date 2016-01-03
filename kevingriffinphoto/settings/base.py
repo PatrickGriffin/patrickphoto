@@ -149,3 +149,10 @@ STATICFILES_DIRS = (
     #'Users/patrickgriffin/anaconda/envs/dadwebsite/src/static_in_pro/our_static',
     #os.path.join(BASE_DIR, "static_in_env"),
     )
+
+
+
+AWS_STORAGE_BUCKET_NAME = 'patrickgriffinphoto'
+AWS_ACCESS_KEY_ID = 'AKIAJPBE675RBH3RZJJQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
