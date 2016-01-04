@@ -12,7 +12,7 @@ def home(request):
 		}
 	for instance in queryset:
 		context['queryset'].append(settings.MEDIA_URL+str(instance.image))
-
+	context['queryset'].reverse()
 	return render(request, 'home_page_content.html', context)
 # Create your views here.
 
